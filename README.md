@@ -1,6 +1,6 @@
 # fastbot-1
 
-Front-End of Fast-Bot
+Front-End of Fast-Bot connected with Mongdb
 
 
 >Login 
