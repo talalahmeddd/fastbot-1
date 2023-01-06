@@ -1,9 +1,8 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const passport = require("passport")
-
 const users = require("./routes/api/users")
-
+const cors = require('cors')
 const app = express()
 
 // BodyParser Middleware
@@ -14,6 +13,7 @@ app.use(
 )
 app.use(express.json())
 
+app.use(cors());
 
 // DB config
 const db = require("./config/keys").mongoURI
@@ -21,7 +21,7 @@ const db = require("./config/keys").mongoURI
 // connect to mongoDB
 mongoose
     .connect(
-    db, { useNewUrlParser: true }
+    db, { useNewUrlParser: true}
     )
     .then (() => console.log("MongoDB successfully connected"))
     .catch ( err => console.log(err))

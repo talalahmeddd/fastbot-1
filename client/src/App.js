@@ -35,7 +35,6 @@ if(localStorage.jwtToken){
   }
 }
 
-const path = window.location.pathname
 class App extends Component {
   render() {
     return (
@@ -48,7 +47,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              { path.indexOf('/support') ===  <SupportAdmin /> }
+              <PrivateRoute exact path="/support" component={SupportAdmin} />
             </Switch>
           </div>
         </Router>

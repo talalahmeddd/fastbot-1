@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import { ChatEngineWrapper, Socket, ChatFeed } from 'react-chat-engine'
 
+
 const ChatEngine = props => {
     const [showChat, setShowChat] = useState(false)
+    const project_id= '8855f6b3-6587-4cde-9f9a-b09e21f90d3b';
 
     useEffect(() => {
         if (props.visible) {
@@ -28,7 +30,7 @@ const ChatEngine = props => {
                 showChat &&
                 <ChatEngineWrapper>
                     <Socket 
-                        projectID={process.env.REACT_APP_CE_PROJECT_ID}
+                        projectID={project_id}
                         userName={props.user.email}
                         userSecret={props.user.email}
                     />

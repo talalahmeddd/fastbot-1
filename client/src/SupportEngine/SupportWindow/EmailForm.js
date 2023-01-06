@@ -8,26 +8,34 @@ import { LoadingOutlined } from '@ant-design/icons'
 
 import Avatar from '../Avatar'
 
+
 const EmailForm = props => {    
     const [email, setEmail] = useState('')
     const [loading, setLoading] = useState(false)
+
+    
 
     function getOrCreateUser(callback) {
         axios.put(
             'https://api.chatengine.io/users/',
             {username: email, email: email, secret: email},
-            {headers: {"Private-Key": process.env.REACT_APP_CE_PRIVATE_KEY}}
-        )
+            {headers: 
+                {
+                    "Private-Key": "61bed80d-423c-41c9-b4a1-72a8ab5b7472",
+                }
+                }
+        ) 
         .then(r => callback(r.data))
         .catch(e => console.log('Get or create user error', e))
     }
-
     function getOrCreateChat(callback) {
         axios.put(
             'https://api.chatengine.io/chats/',
-            {usernames: [email, 'Adam La Morre'], is_direct_chat: true},
-            {headers: {
-                "Project-ID": process.env.REACT_APP_CE_PROJECT_ID,
+            {
+                usernames: [email, 'FAST BOT'], is_direct_chat: true},
+            {
+                headers: {
+                "Project-ID": "8855f6b3-6587-4cde-9f9a-b09e21f90d3b",
                 "User-Name": email,
                 "User-Secret": email,
             }}

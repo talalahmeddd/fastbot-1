@@ -5,9 +5,9 @@ import { ChatEngine } from 'react-chat-engine'
 const SupportAdmin = () => {
   return (
     <ChatEngine 
-      projectID={process.env.REACT_APP_CE_PROJECT_ID}
-      userName='Chat Agent'
-      userSecret='pass1234'
+      projectID={"8855f6b3-6587-4cde-9f9a-b09e21f90d3b"}
+      userName='FAST BOT'
+      userSecret='fastbot123'
       height='calc(100vh - 12px)'
     />
   );
