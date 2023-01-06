@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import SupportEngine from '../../SupportEngine';
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -35,6 +36,9 @@ class Dashboard extends Component {
             >
               Logout
             </button>
+            <div>
+              <SupportEngine />
+            </div>
           </div>
         </div>
       </div>

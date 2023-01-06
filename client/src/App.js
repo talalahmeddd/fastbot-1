@@ -12,6 +12,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import SupportAdmin from './SupportAdmin';
 
 // Check for token to keep user logged in
 if(localStorage.jwtToken){
@@ -34,6 +35,7 @@ if(localStorage.jwtToken){
   }
 }
 
+const path = window.location.pathname
 class App extends Component {
   render() {
     return (
@@ -46,6 +48,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              { path.indexOf('/support') ===  <SupportAdmin /> }
             </Switch>
           </div>
         </Router>
