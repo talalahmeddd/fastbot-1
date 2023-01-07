@@ -19,5 +19,4 @@ const SupportAdmin = () => {
     </div>
   );
 }
-
 export default SupportAdmin;

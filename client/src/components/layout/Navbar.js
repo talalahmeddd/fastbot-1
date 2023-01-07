@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-//import "./button.css"
-
 
 class Navbar extends Component {
-
-
   render() {
     return (
       <div className="navbar-fixed">
@@ -21,33 +17,10 @@ class Navbar extends Component {
               FASTBOT
             </Link>
             </div>
-            
-            
-            {/* <button 
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem",
-                float: "right",
-                color:"black",
-                  
-                
-                
-              }}
-              
-              className="btn"
-            >
-              Give Feedback
-            </button> */}
-            
-
         </nav>
       </div>
     );
   
   }
   
-}
-
-export default Navbar;
+}export default Navbar;

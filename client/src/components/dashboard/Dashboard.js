@@ -27,21 +27,21 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}><b>FASTBOT</b></span>
               </p>
             </h4>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJxKlArhDSx7Dkyn4-OR88ddZwNp4tBHcpQi-5UQBwKtePw/viewform" target="_blank" rel="noopener noreferrer">
+              <b>Give Feedback</b><br/><br/>
+            </a>
             <button
               style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                marginTop: "1rem"
+                marginTop: "60px"
               }}
               onClick={this.onLogoutClick}
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
               Logout
-            </button>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJxKlArhDSx7Dkyn4-OR88ddZwNp4tBHcpQi-5UQBwKtePw/viewform" target="_blank" rel="noopener noreferrer">
-              GiveFeedback
-            </a>
+        </button>
             <div>
               <SupportEngine />
             </div>
