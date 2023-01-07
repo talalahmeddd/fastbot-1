@@ -48,7 +48,7 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/support" component={SupportAdmin} />
-            </Switch>
+           </Switch>
           </div>
         </Router>
       </Provider>
