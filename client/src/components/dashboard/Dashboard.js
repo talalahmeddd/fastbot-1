@@ -3,20 +3,20 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import SupportEngine from '../../SupportEngine';
-import Navbar from "../layout/Navbar";
+import FeedBack from 'react-feedback-popup';
+
+
+
 class Dashboard extends Component {
   onLogoutClick = e => {
-    e.preventDefault();
+    
+    //e.preventDefault();
     this.props.logoutUser();
   };
-
-
   render() {
     const { user } = this.props.auth;
 
     return (
-      <div>
-        <Navbar/>
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align">
@@ -27,27 +27,66 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}><b>FASTBOT</b></span>
               </p>
             </h4>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJxKlArhDSx7Dkyn4-OR88ddZwNp4tBHcpQi-5UQBwKtePw/viewform" target="_blank" rel="noopener noreferrer">
-              <b>Give Feedback</b><br/><br/>
-            </a>
             <button
               style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                marginTop: "60px"
+                marginTop: "1rem"
               }}
-              onClick={this.onLogoutClick}
+              //  onClick={this.onLogoutClick}
+              //  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              onClick={() => {
+                const confirmBox = window.confirm(
+                  "Are you sure ?"
+                )
+                if (confirmBox === true) {
+                  this.onLogoutClick();
+                }
+              }}
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
               Logout
-        </button>
+            </button>
+           
+           
             <div>
               <SupportEngine />
             </div>
+            <div>
+            <FeedBack
+              
+				style={{zIndex:'20', marginLeft:'20px', position:'fixed'}}
+				position="left"
+				numberOfStars={5}
+				headerText="Hello"
+				bodyText="Custom Body test"
+				buttonText="Feedback"
+				handleClose={() => console.log("handleclose")}
+				handleSubmit={(data) => 
+					fetch('https://formspree.io/f/moqzqknr', {
+						headers: {
+							Accept: 'application/json',
+							'Content-Type': 'application/json'
+						},
+						method: 'POST', // or 'PUT'
+						body: JSON.stringify(data),
+					}).then((response) => { 
+						if (!response.ok) {
+							return Promise.reject('Our servers are having issues! We couldn\'t send your feedback!');
+						}
+						response.json()
+					}).then(() => {
+						alert('Success!');
+					}).catch((error) => {
+						alert('Our servers are having issues! We couldn\'t send your feedback!', error);
+					})
+				}
+				handleButtonClick={() => console.log("handleButtonClick")}
+			/>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     );
   }
