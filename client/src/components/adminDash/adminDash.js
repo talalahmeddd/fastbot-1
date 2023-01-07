@@ -35,6 +35,21 @@ class adminDashboard extends Component {
                 <Link to="/support"><b>Live Chat</b></Link>
             </button>
             </div>
+            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <a href="https://formspree.io/forms/moqzqknr/submissions" target={"_blank"}>
+            <button style={{
+                    width: "200px",
+                    borderRadius: "15px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem",
+                    marginLeft:"50px"
+                  }}
+                  type="submit"
+                  className="btn btn-large black"
+                >
+                <b>View Feedback</b>
+            </button></a>
+            </div>
           </div>
         </div>
       </div>
