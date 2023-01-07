@@ -10,6 +10,7 @@ class Dashboard extends Component {
     this.props.logoutUser();
   };
 
+
   render() {
     const { user } = this.props.auth;
 
@@ -36,6 +37,9 @@ class Dashboard extends Component {
             >
               Logout
             </button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJxKlArhDSx7Dkyn4-OR88ddZwNp4tBHcpQi-5UQBwKtePw/viewform" target="_blank" rel="noopener noreferrer">
+              GiveFeedback
+            </a>
             <div>
               <SupportEngine />
             </div>
