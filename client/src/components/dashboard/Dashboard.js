@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import SupportEngine from '../../SupportEngine';
-
+import Navbar from "../layout/Navbar";
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -15,6 +15,8 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
+      <div>
+        <Navbar/>
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align">
@@ -45,6 +47,7 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }
