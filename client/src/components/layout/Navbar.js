@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { logoutUser } from "../../actions/authActions";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-class Navbar extends Component {
+export class Navbar extends Component {
+  onLogoutClick = e => {
+    
+    //e.preventDefault();
+    this.props.logoutUser();
+  };
+
   render() {
     return (
       <div className="navbar-fixed">
@@ -16,6 +25,23 @@ class Navbar extends Component {
               <i className="material-icons">code</i>
               FASTBOT
             </Link>
+            <div>
+            <button
+              style={{
+                width: "110px",
+                borderRadius: "12px",
+                letterSpacing: "1px",
+                marginTop: "1rem",
+                marginRight:"1760px"
+              }}
+              onClick={() => {
+                  this.onLogoutClick();
+              }}
+              className="btn btn-large black accent-2 white-text"
+            >
+              Logout
+            </button>
+            </div>
             </div>
         </nav>
       </div>
@@ -23,4 +49,18 @@ class Navbar extends Component {
   
   }
   
-}export default Navbar;
+}
+
+Navbar.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Navbar);

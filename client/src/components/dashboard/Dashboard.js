@@ -4,20 +4,18 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import SupportEngine from '../../SupportEngine';
 import FeedBack from 'react-feedback-popup';
+import Navbar from "../layout/Navbar";
 
 
 
 class Dashboard extends Component {
-  onLogoutClick = e => {
-    
-    //e.preventDefault();
-    this.props.logoutUser();
-  };
   render() {
     const { user } = this.props.auth;
 
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div>
+        <Navbar/>
+      <div style={{ height: "45vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align">
             <h4>
@@ -27,40 +25,17 @@ class Dashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}><b>FASTBOT</b></span>
               </p>
             </h4>
-            <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
-              //  onClick={this.onLogoutClick}
-              //  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-              onClick={() => {
-                const confirmBox = window.confirm(
-                  "Are you sure ?"
-                )
-                if (confirmBox === true) {
-                  this.onLogoutClick();
-                }
-              }}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-            >
-              Logout
-            </button>
-           
-           
             <div>
               <SupportEngine />
             </div>
             <div>
             <FeedBack
               
-				style={{zIndex:'20', marginLeft:'20px', position:'fixed'}}
+				style={{zIndex:'25', marginLeft:'20px'}}
 				position="left"
 				numberOfStars={5}
-				headerText="Hello"
-				bodyText="Custom Body test"
+				headerText="Give Feedback"
+				bodyText="Please provide feedback"
 				buttonText="Feedback"
 				handleClose={() => console.log("handleclose")}
 				handleSubmit={(data) => 
@@ -82,11 +57,11 @@ class Dashboard extends Component {
 						alert('Our servers are having issues! We couldn\'t send your feedback!', error);
 					})
 				}
-				handleButtonClick={() => console.log("handleButtonClick")}
-			/>
+				handleButtonClick={() => console.log("handleButtonClick")}/>
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

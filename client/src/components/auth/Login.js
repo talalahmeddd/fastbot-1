@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-import Navbar from "../layout/Navbar";
+
 class Login extends Component {
   constructor() {
     super();
@@ -52,8 +52,6 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div>
-        <Navbar/>
       <div className="container">
         <div style={{ marginTop: "4rem" }} className="row">
           <div className="col s8 offset-s2">
@@ -117,7 +115,6 @@ class Login extends Component {
             </form>
           </div>
         </div>
-      </div>
       </div>
     );
   }

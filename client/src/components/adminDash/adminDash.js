@@ -21,13 +21,13 @@ class adminDashboard extends Component {
                 <span style={{ fontFamily: "monospace" }}><b>Admin Dashboard</b></span>
               </p>
             </h4>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <div className="col s12" style={{ paddingLeft: "1.250px" }}>
             <button style={{
                     width: "150px",
                     borderRadius: "15px",
                     letterSpacing: "1.5px",
                     marginTop: "1rem",
-                    marginLeft:"50px"
+                    marginLeft:"0px"
                   }}
                   type="submit"
                   className="btn btn-large black"
@@ -36,13 +36,13 @@ class adminDashboard extends Component {
             </button>
             </div>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-            <a href="https://formspree.io/forms/moqzqknr/submissions" target={"_blank"}>
+            <a href="https://formspree.io/forms/moqzqknr/submissions" target={"_blank"} rel="noreferrer">
             <button style={{
                     width: "200px",
                     borderRadius: "15px",
                     letterSpacing: "1.5px",
                     marginTop: "1rem",
-                    marginLeft:"50px"
+                    marginLeft:"0px"
                   }}
                   type="submit"
                   className="btn btn-large black"
