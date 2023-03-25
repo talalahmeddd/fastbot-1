@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import { Link } from "react-router-dom";
+import Navbar from "../layout/Navbar";
 
 class adminDashboard extends Component {
   onLogoutClick = e => {
@@ -13,12 +14,14 @@ class adminDashboard extends Component {
 
   render() {
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div style={{backgroundColor:"black", backgroundSize: "10px"}}>
+        <Navbar/>
+      <div style={{ height: "93.3vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12">
             <h4>
               <p >
-                <span style={{ fontFamily: "monospace" }}><b>Admin Dashboard</b></span>
+                <span style={{ fontFamily: "monospace", color:"white" }}><b>Admin Dashboard</b></span>
               </p>
             </h4>
             <div className="col s12" style={{ paddingLeft: "1.250px" }}>
@@ -30,7 +33,7 @@ class adminDashboard extends Component {
                     marginLeft:"0px"
                   }}
                   type="submit"
-                  className="btn btn-large black"
+                  className="btn btn-large white"
                 >
                 <Link to="/support"><b>Live Chat</b></Link>
             </button>
@@ -45,13 +48,14 @@ class adminDashboard extends Component {
                     marginLeft:"0px"
                   }}
                   type="submit"
-                  className="btn btn-large black"
+                  className="btn btn-large white blue-text"
                 >
                 <b>View Feedback</b>
             </button></a>
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

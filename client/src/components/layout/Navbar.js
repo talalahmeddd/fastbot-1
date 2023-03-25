@@ -31,7 +31,7 @@ export class Navbar extends Component {
                 width: "110px",
                 borderRadius: "12px",
                 letterSpacing: "1px",
-                marginTop: "1rem",
+                marginTop: "1px",
                 marginRight:"1760px"
               }}
               onClick={() => {

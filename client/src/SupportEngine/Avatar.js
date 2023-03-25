@@ -11,10 +11,10 @@ const Avatar = props => {
                 className='transition-3'
                 style={{
                     ...styles.avatarHello,
-                    ...{ opacity: hovered ? '1' : '0' }
+                    // ...{ opacity: hovered ? '1' : '0' }
                 }}
             >
-                Hey it's FASTBOT
+                Live Chat
             </div>
 
             <div 

@@ -26,7 +26,6 @@ router.post("/register", (req, res) => {
     if(!isValid){
         return res.status(400).json(errors)
     }
-
     User.findOne({email: req.body.email }).then(user => {
         if(user){
             return res.status(400).json({ email: "Email already exists"})
@@ -53,6 +52,7 @@ router.post("/register", (req, res) => {
 })
 
 
+
 // @route POST api/users/login
 // @desc Login user and return JWT token
 // @access Public
@@ -73,7 +73,6 @@ router.post("/login", (req, res) => {
         if(!user){
             return res.status(400).json({ emailnotfound: "Email not found"})
         }
-
         // Check password
         bcrypt.compare(password, user.password).then(isMatch => {
             if(isMatch){
@@ -106,4 +105,5 @@ router.post("/login", (req, res) => {
     })
 
 })
+
 module.exports = router

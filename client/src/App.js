@@ -13,6 +13,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import SupportAdmin from './SupportAdmin';
 import adminDash from "./components/adminDash/adminDash";
 import './App.css'
+
 // Check for token to keep user logged in
 if(localStorage.jwtToken){
   // Set auth token header auth

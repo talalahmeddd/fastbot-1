@@ -21,7 +21,7 @@ const EmailForm = props => {
             {username: email, email: email, secret: email},
             {headers: 
                 {
-                    "Private-Key": "61bed80d-423c-41c9-b4a1-72a8ab5b7472",
+                    "Private-Key": "333c5c89-a5dd-4d41-ba1b-aef7c85e2e61",
                 }
                 }
         ) 
@@ -32,10 +32,10 @@ const EmailForm = props => {
         axios.put(
             'https://api.chatengine.io/chats/',
             {
-                usernames: [email, 'FAST BOT'], is_direct_chat: true},
+                usernames: [email, 'FastBot'], is_direct_chat: true},
             {
                 headers: {
-                "Project-ID": "8855f6b3-6587-4cde-9f9a-b09e21f90d3b",
+                "Project-ID": "110df2bc-720f-4402-82a6-4f6478d8b40c",
                 "User-Name": email,
                 "User-Secret": email,
             }}
@@ -114,7 +114,7 @@ const EmailForm = props => {
                 <br/><br/>
                 <form 
                     onSubmit={e => handleSubmit(e)}
-                    style={{ position: 'relative', width: '100%', top: '19.75%' }}
+                    style={{ position: 'relative', width: '100%', top: '12.75%' }}
                 >
                     <input 
                         placeholder='Your Email'

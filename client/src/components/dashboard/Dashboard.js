@@ -13,18 +13,33 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div>
+      <div style={{backgroundColor:"black"}}>
         <Navbar/>
-      <div style={{ height: "45vh" }} className="container valign-wrapper">
+      <div style={{ height: "93.3vh" }} className="container valign-wrapper">
         <div className="row">
-          <div className="landing-copy col s12 center-align">
+          <div className="landing-copy col s12 center-align white-text">
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
+              <p className="flow-text white-text text-darken-1">
                 You are logged into {" "}
                 <span style={{ fontFamily: "monospace" }}><b>FASTBOT</b></span>
               </p>
             </h4>
+            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <a href="http://127.0.0.1:5000/" target={"_blank"} rel="noreferrer">
+            <button style={{
+                    width: "200px",
+                    borderRadius: "15px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem",
+                    marginLeft:"0px"
+                  }}
+                  type="submit"
+                  className="btn btn-large white blue-text"
+                >
+                <b>CHATBOT</b>
+            </button></a>
+            </div>
             <div>
               <SupportEngine />
             </div>

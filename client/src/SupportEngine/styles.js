@@ -18,7 +18,7 @@ export const styles = {
     avatarHello: { 
         // Position
         position: 'absolute', 
-        left: 'calc(-100% - 44px - 28px)', 
+        left: 'calc(-100% - 4px - 5px)', 
         top: 'calc(50% - 24px)', 
         // Layering
         zIndex: '10000',
@@ -34,10 +34,10 @@ export const styles = {
         // Position
         position: 'fixed',
         bottom: '116px',
-        right: '24px',
+        right: '26px',
         // Size
         width: '420px',
-        height: '530px',
+        height: '540px',
         maxWidth: 'calc(100% - 48px)',
         maxHeight: 'calc(100% - 48px)',
         backgroundColor: 'white',
