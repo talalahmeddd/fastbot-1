@@ -17,16 +17,16 @@ class Dashboard extends Component {
         <Navbar/>
       <div style={{ height: "93.3vh" }} className="container valign-wrapper">
         <div className="row">
-          <div className="landing-copy col s12 center-align white-text">
-            <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
+          <div className="landing-copy col s12 center-align black-text">
+            <h4 className="flow-text white-text text-darken-1">
+              <b >Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text white-text text-darken-1">
                 You are logged into {" "}
                 <span style={{ fontFamily: "monospace" }}><b>FASTBOT</b></span>
               </p>
             </h4>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-            <a href="http://127.0.0.1:5000/" target={"_blank"} rel="noreferrer">
+            <a href="http://localhost:8000/" target={"_blank"} rel="noreferrer">
             <button style={{
                     width: "200px",
                     borderRadius: "15px",

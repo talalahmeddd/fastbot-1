@@ -5,7 +5,7 @@ import { ChatEngineWrapper, Socket, ChatFeed } from 'react-chat-engine'
 
 const ChatEngine = props => {
     const [showChat, setShowChat] = useState(false)
-    const project_id= "110df2bc-720f-4402-82a6-4f6478d8b40c";
+    const project_id= "c75fb6ed-3d94-4fd7-8972-0fa1c53e4d70";
 
     useEffect(() => {
         if (props.visible) {

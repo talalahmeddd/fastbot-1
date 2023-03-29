@@ -11,9 +11,9 @@ const SupportAdmin = () => {
               Admin Dashboard
             </Link>
     <ChatEngine 
-      projectID={"110df2bc-720f-4402-82a6-4f6478d8b40c"}
+      projectID={"c75fb6ed-3d94-4fd7-8972-0fa1c53e4d70"}
       userName='FastBot'
-      userSecret='fastbot123'
+      userSecret='Fastbot@123'
       height='calc(100vh - 12px)'
     />
     </div>

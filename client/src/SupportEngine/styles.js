@@ -85,7 +85,7 @@ export const styles = {
         top: '60%', 
         color: '#7a39e0', 
         fontSize: '24px', 
-        fontWeight: '600' 
+        fontWeight: '600',
     },
     loadingDiv: { 
         position: 'absolute', 

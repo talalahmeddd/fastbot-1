@@ -21,7 +21,7 @@ const EmailForm = props => {
             {username: email, email: email, secret: email},
             {headers: 
                 {
-                    "Private-Key": "333c5c89-a5dd-4d41-ba1b-aef7c85e2e61",
+                    "Private-Key": "611a3bcc-6101-475e-8515-6b1754fcc7e0",
                 }
                 }
         ) 
@@ -35,7 +35,7 @@ const EmailForm = props => {
                 usernames: [email, 'FastBot'], is_direct_chat: true},
             {
                 headers: {
-                "Project-ID": "110df2bc-720f-4402-82a6-4f6478d8b40c",
+                "Project-ID": "c75fb6ed-3d94-4fd7-8972-0fa1c53e4d70",
                 "User-Name": email,
                 "User-Secret": email,
             }}

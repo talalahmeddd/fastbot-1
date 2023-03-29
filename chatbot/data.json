@@ -36,6 +36,289 @@
             "I'm FASTBot!",
             "The name's Bot. FASTBot."
         ]
+    },
+    {   
+        "tag": "admission",
+        "patterns": [
+            "What is the procedure to get admission in FAST?"
+    ],
+        "responses": [
+            "First you have to apply through the website, After that you have to set preferences and make your merit for the desired program then you can submit the fee and get an admission"
+        ]
+    },
+    {   
+        "tag": "programs",
+        "patterns": [
+            "What programs are offered in FAST?"
+    ],
+        "responses": [
+            "Variety of Programs are offered in FAST such as BS Computer Sciences, BS Electrical Engineering, BS Software Engineering, Bachelors in Business Administration. For more information read FAST Prospectues."
+    ]
+    },
+    {   
+        "tag": "merits",
+        "patterns": [
+            "How is the merit calculated in FAST?"
+    ],
+        "responses": [
+            "The merit is calculated 50% on the basis of Fast Admission Test and 50% on the basis of your FSC result."
+    ]
+    },
+    {   
+        "tag": "admission schedule",
+        "patterns": [
+            "What is the schedule of admissions in FAST?"
+    ],
+        "responses": [
+            "The admission starts in May and are open till the end of June. For exact dates visit our website."
+    ]
+    },
+    {   
+        "tag": "apply to FAST",
+        "patterns": [
+            "How to apply in FAST?"
+    ],
+        "responses": [
+            "Create an account on our website. Fill out the details and submit applying fee. Then you have to pass the admission test."
+    ]
+    },
+    {   
+        "tag": "scholarship",
+        "patterns": [
+            "Can I get a scholarship in FAST?"
+    ],
+        "responses": [
+            "Yes you can get a scholarship in FAST. FAST provides multiple scholarships to its students, Moreover you can also apply on Financial Assistance. For more information contact pur campus representative."
+    ]
+    },
+    {   
+        "tag": "test pattern",
+        "patterns": [
+            "What is test pattern of admission test in FAST?"
+    ],
+        "responses": [
+            "The test contains questions from Mathematics, Physics, Analytical Skills and English. Each portion has  a specific weight."
+    ]
+    },
+    {   
+        "tag": "fee structure",
+        "patterns": [
+            "What is the fee structure in FAST?"
+    ],
+        "responses": [
+            "The fee is calculatraed in terms of Credit Hour. The fee for first semester ramges from 150K-200K depending upon your credit hours,admission processing fee and other variables."
+    ]
+    },
+    {   
+        "tag": "courses",
+        "patterns": [
+            "What courses will I study in FAST?"
+    ],
+        "responses": [
+            "You will study different courses in the span of 4 years depending upon the program you choose."
+    ]
+    },
+    {   
+        "tag": "hostel",
+        "patterns": [
+            "Is Hostel Facility available in FAST?"
+    ],
+        "responses": [
+            "Currently on campus hostel facility is only available at FAST-Chiniot Faisalabad Campus."
+    ]
+    },
+    {   
+        "tag": "hostel room",
+        "patterns": [
+            "How do I get a room in FAST Hostel?"
+    ],
+        "responses": [
+            "You can get a form for accomodations from FAST FAISALABAD Hostel office. Fill it out and submit the fee. You will be accomodated in the hostel."
+    ]
+    },
+    {   
+        "tag": "hostel fee",
+        "patterns": [
+            "What are the dues for Hostel?",
+            "what is the fee fot hostel",
+            "what are hotel room charges"
+    ],
+        "responses": [
+            "The dues for hostel currently for a shared room in boys hostel are 41000-/ PKR , for a single room 55000-/ PKR, for double room 48000-/ PKR. Yoy may need to submit hostel security fee and mess security fee if you're getting a room for the first time which are 8000-/ and 7000-/ respectively."
+    ]
+    },
+    {   
+        "tag": "hostel meals",
+        "patterns": [
+            "How many meals are served in hostel?"
+    ],
+        "responses": [
+            "3 meals are served in the mess regularly. Breakfast, Lunch and Dinner."
+    ]
+    },
+    {   
+        "tag": "meal cost",
+        "patterns": [
+            "What is the costs of meal in hostel?"
+    ],
+        "responses": [
+            "The cost of meals vary according to the meal being served."
+    ]
+    },
+    {   
+        "tag": "room types",
+        "patterns": [
+            "What type of rooms are avilable in FAST?"
+    ],
+        "responses": [
+            "For Boys:- Single, Double and Shared Rooms are availabe in the hostel, For Girls:- Shared Rooms are availabe in the hostel."
+    ]
+    },
+    {   
+        "tag": "shared room",
+        "patterns": [
+            "How many students are there in a shared room?"
+    ],
+        "responses": [
+            "There are a total of 6 students in a shared room."
+    ]
+    },
+    {   
+        "tag": "single room cost",
+        "patterns": [
+            "What are the dues of a single person room?",
+            "what is the cost of single person room"
+    ],
+        "responses": [
+            "The dues of a single room are 55000 -/ PKR."
+    ]
+    },
+    {   
+        "tag": "shared room cost",
+        "patterns": [
+            "What are the dues for a shared room?",
+            "what is the cost of shared room"
+    ],
+        "responses": [
+            "The dues of a shared room are 41000-/ PKR."
+    ]
+    },
+    {   
+        "tag": "campus change",
+        "patterns": [
+            "What is the process to change FAST Campus?"
+    ],
+        "responses": [
+            "You can change the campus by appearing on the merit of your desired campus and program upon retaking Fast admission test."
+    ]
+    },
+    {   
+        "tag": "credit transfer",
+        "patterns": [
+            "Are credits tranferred when I change a campus?"
+    ],
+        "responses": [
+            "Yes, the credits are transferred when you change a campus."
+    ]
+    },
+    {   
+        "tag": "sports facility",
+        "patterns": [
+            "Are there any sports facility available in the campus?"
+    ],
+        "responses": [
+            "Yes there are a lot of sports facilities availabe in FAST Faisalabad, including table tennis, cricket, football, futsal and badminton."
+    ]
+    },
+    {   
+        "tag": "gym",
+        "patterns": [
+            "Is there a gym in Fast Faisalabad Hostel?"
+    ],
+        "responses": [
+            "Yes there is a gym available in the hostel, you can get the membership once you are allocated a room in the hostel."
+    ]
+    },
+    {   
+        "tag": "campus size",
+        "patterns": [
+            "How big is Faisalabad Campus of Fast?"
+    ],
+        "responses": [
+            "FAST Faisalabad is a big campus compring almost 30 acres of Land."
+    ]
+    },
+    {   
+        "tag": "campus location",
+        "patterns": [
+            "Where is FAST Faisalabad located?"
+    ],
+        "responses": [
+            "FAST Faisalabd is located at Sargodha Road, 10km from the Motorway Interchange at Loonaywala Stop."
+    ]
+    },
+    {   
+        "tag": "night cafe",
+        "patterns": [
+            "Is there a night cafe in Fast Faisalabad hostel?"
+    ],
+        "responses": [
+            "Yes there is a night café (Dhaba) available at Fast Faisalabad."
+    ]
+    },
+    {   
+        "tag": "degree",
+        "patterns": [
+            "Is it tough to get a degree from Fast?"
+    ],
+        "responses": [
+            "Its certainly challenging but if you're detrmined then you'll get all the help you need."
+    ]
+    },
+    {   
+        "tag": "duration BS programs",
+        "patterns": [
+            "What is the duration of BS Programs in FAST?"
+    ],
+        "responses": [
+            "The duration of BS Program is 4-years which consist of 8 semesters."
+    ]
+    },
+    {   
+        "tag": "duration MS programs",
+        "patterns": [
+            "What is the duration of MS Program in FAST?"
+    ],
+        "responses": [
+            "The duration of MS Programs is 2 years as mandated by the HEC."
+    ]
+    },
+    {   
+        "tag": "PHD",
+        "patterns": [
+            "Is PHD Program available at FAST?"
+    ],
+        "responses": [
+            "Yes PHD Programs are available at FAST, under the supervision of HEC Approved Phd supervisors?"
+    ]
+    },
+    {   
+        "tag": "labs",
+        "patterns": [
+            "Are modern labs available at Fast?"
+    ],
+        "responses": [
+            "Yes All campuses of FAST have modern up to date labs available."
+    ]
+    },
+    {   
+        "tag": "internet",
+        "patterns": [
+            "Is internet available at FAST?"
+    ],
+        "responses": [
+            "Yes the whole campus is under internet coverage."
+    ]
     }
 ]
 }
