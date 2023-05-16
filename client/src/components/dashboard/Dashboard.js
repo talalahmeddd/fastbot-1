@@ -11,16 +11,24 @@ import Navbar from "../layout/Navbar";
 class Dashboard extends Component {
   render() {
     const { user } = this.props.auth;
-
+    
+    const backgroundStyle = {
+      backgroundImage: "url(/fastbot-logo.png)",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "top",
+      backgroundSize: "30%",
+      backgroundColor:"white"
+    };
+    
     return (
-      <div style={{backgroundColor:"black"}}>
+      <div style={backgroundStyle}>
         <Navbar/>
       <div style={{ height: "93.3vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align black-text">
-            <h4 className="flow-text white-text text-darken-1">
+            <h4 className="flow-text black-text text-darken-1">
               <b >Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text white-text text-darken-1">
+              <p className="flow-text black-text text-darken-1">
                 You are logged into {" "}
                 <span style={{ fontFamily: "monospace" }}><b>FASTBOT</b></span>
               </p>
@@ -35,8 +43,7 @@ class Dashboard extends Component {
                     marginLeft:"0px"
                   }}
                   type="submit"
-                  className="btn btn-large white blue-text"
-                >
+                  className="btn btn-large black blue-text">
                 <b>CHATBOT</b>
             </button></a>
             </div>

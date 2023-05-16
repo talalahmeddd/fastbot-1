@@ -50,10 +50,11 @@ class Login extends Component {
   };
   render() {
     const { errors } = this.state;
-
+  
     return (
-      <div className="container">
-        <div style={{ marginTop: "4rem" }} className="row">
+      <div className="container" >
+        {/* <img src="/fastbot-bg.png"></img> */}
+        <div style={{ marginTop: "20rem"}} className="row">
           <div className="col s8 offset-s2">
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
@@ -118,6 +119,7 @@ class Login extends Component {
       </div>
     );
   }
+  
 }
 
 Login.propTypes = {

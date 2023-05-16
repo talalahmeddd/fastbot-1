@@ -14,14 +14,14 @@ class adminDashboard extends Component {
 
   render() {
     return (
-      <div style={{backgroundColor:"black", backgroundSize: "10px"}}>
+      <div style={{backgroundSize:"100%", backgroundColor:"white"}}>
         <Navbar/>
       <div style={{ height: "93.3vh" }} className="container valign-wrapper">
-        <div className="row">
+        <div className="row" style={{marginBottom:"250px"}}>
           <div className="landing-copy col s12">
             <h4>
               <p >
-                <span style={{ fontFamily: "monospace", color:"white" }}><b>Admin Dashboard</b></span>
+                <span style={{ fontFamily: "monospace", color:"darkblue", fontSize:"60px" }}><b>ADMIN DASHBOARD</b></span>
               </p>
             </h4>
             <div className="col s12" style={{ paddingLeft: "1.250px" }}>
@@ -33,7 +33,7 @@ class adminDashboard extends Component {
                     marginLeft:"0px"
                   }}
                   type="submit"
-                  className="btn btn-large white"
+                  className="btn btn-large black"
                 >
                 <Link to="/support"><b>Live Chat</b></Link>
             </button>
@@ -48,10 +48,24 @@ class adminDashboard extends Component {
                     marginLeft:"0px"
                   }}
                   type="submit"
-                  className="btn btn-large white blue-text"
+                  className="btn btn-large black blue-text"
                 >
                 <b>View Feedback</b>
             </button></a>
+            </div>
+            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <button style={{
+                    width: "300px",
+                    borderRadius: "15px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem",
+                    marginLeft:"0px"
+                  }}
+                  type="submit"
+                  className="btn btn-large black blue-text"
+                >
+                <Link to="/report" target="_blank"><b>View Efficiency Report</b></Link>
+            </button>
             </div>
           </div>
         </div>

@@ -1,324 +1,1308 @@
-{"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-     "context": [""]
-    },
-    {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-     "context": [""]
-    },
-    {"tag": "thanks",
-     "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-     "responses": ["Happy to help!", "Any time!", "My pleasure"],
-     "context": [""]
-    },
-    {"tag": "noanswer",
-     "patterns": [],
-     "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-     "context": [""]
-    },
-    {"tag": "options",
-     "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-     "responses": ["I can help you with queries related to admissions, hostel, academics"],
-     "context": [""]
-    },
-    {   
-        "tag": "name",
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hi there", "How are you", "Is anyone there?", "Hey", "Hola", "Hello", "Good day"],
+            "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+            "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+            "context": [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+            "responses": ["Happy to help!", "Any time!", "My pleasure"],
+            "context": [""]
+        },
+        {
+            "tag": "noanswer",
+            "patterns": [],
+            "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+            "context": [""]
+        },
+        {
+            "tag": "options",
+            "patterns": ["Can you help me?","How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+            "responses": ["I can help you with queries related to admissions, hostel, academics"],
+            "context": [""]
+        },
+        {
+            "tag": "name",
+            "patterns": [
+                "what is your name",
+                "what should I call you",
+                "whats your name?"
+            ],
+            "responses": [
+                "You can call me FASTBot.",
+                "I'm FASTBot!",
+                "The name's Bot. FASTBot."
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+            "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+        },
+        {
+            "tag": "admission",
+            "patterns": ["How do I apply to FAST University?", "What are the admission requirements", "Can you help me with my application"],
+            "responses": ["First of all, you have to create an account of our website, then follow the guidlines provided there step by step","Admission requirements include HSSC Percentage of 60% , Merit of the desired campus and program, there are some other requiremnts for which you can create an account of FAST fro admission process.","Yes I can help you with that, first of all create an account on FAST Admission portal and follow the guidelines step by step."]
+        },
+        {
+            "tag": "program",
+            "patterns": ["What programs do you offer", "Can you tell me about your programs", "Do you have any new programs"],
+            "responses": ["FAST Faisalabad offers a wide range on Programs which includes Computer Science, Electrical Engineering, Bachelors of Business Administration","Yes we have recently started new programs like Bachelors in Robotics, Artificial Intelligence and Business Analytics."]
+        },
+        {
+            "tag": "financial aid",
+            "patterns": ["Do you offer financial aid", "What kind of financial aid is available", "How do I apply for financial aid"],
+            "responses": ["FAST Faisalabad offers Financial Aid in the form of Financial Assistance which is Qarz e Hasana for desrving students, you can apply from our website or manually from FA Office","Our financial assistance program offers upto 100% Fee Waiver for deserving students."]
+        },
+        {
+            "tag": "tuition",
+            "patterns": ["What is the tuition", "How much does it cost to attend", "Can you tell me about the fees"],
+            "responses": ["Tuition fee is calculated on tha basis of Credit Hours, currently one credit hour cost 8500-/ PKR. Typically tuition fee for one semester ranges from 140k-150K -/ PKR."]
+        },
+        {
+            "tag": "campus life",
+            "patterns": ["What is campus life like", "What kind of clubs and organizations are available"],
+            "responses": ["We have a vibrant campus life at FAST, where students are provided with an opportunity to learn, grow and groom themselves both academically and professionally."]
+        },
+        {
+            "tag": "admission requirements",
+            "patterns": ["What are the admission requirements", "What do I need to get admitted", "What are the admission requirements for undergraduate/graduate programs at FAST University?"],
+            "responses": ["The admission requirements vary depending on the program you are applying to. Generally, you will need to submit FSC Result Card, test scores, and other materials. You can find more information by creating an account on FAST Admission Portal."]
+        },
+        {
+            "tag": "application process",
+            "patterns": ["How do I apply", "What is the application process"],
+            "responses": ["You can apply online on our website. The application process typically involves submitting transcripts, test scores, and other documents.","You can find step by step guide through the admission process on FAST Admission Portal."]
+        },
+        {
+            "tag": "application deadline",
+            "patterns": ["When is the application deadline", "Am I too late to apply","What is the last date to apply in FAST"],
+            "responses": ["There are several reminders of the admission applications deadline. You can find the deadline on our social media handles or websites.","If you are late you may still be able to apply as a late applicant.","The last date to apply varies year by year typically it is in the mid of July"]
+        },
+        {
+            "tag": "application status",
+            "patterns": ["What is the status of my application", "Have you received my application"],
+            "responses": ["You can check the status of your application on FAST Admission Portal. If you have any questions, you can contact the admissions office."]
+        },
+        {
+            "tag": "program information",
+            "patterns": ["What programs do you offer", "Can you tell me about your programs"],
+            "responses": ["We offer a wide range of programs. You can find information about them on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "financial aid",
+            "patterns": ["Do you offer financial aid", "What kind of financial aid is available", "How do I apply for financial aid"],
+            "responses": ["Yes, we offer financial aid. You can find information about the types of aid available and how to apply on our website or by contacting the financial aid office."]
+        },
+        {
+            "tag": "scholarships",
+            "patterns": ["What scholarships are available", "How do I apply for scholarships"],
+            "responses": ["We offer a variety of scholarships for qualified applicants. You can find information about the types of scholarships available and how to apply on our website or by contacting the scholarships office."]
+        },
+        {
+            "tag": "admission events",
+            "patterns": ["Are there any admission events coming up", "Can I visit the campus"],
+            "responses": ["Yes, we regularly host admission events for prospective students. You can find information about upcoming events on our website or by contacting the admissions office. You can also schedule a visit to our campus."]
+        },
+        {
+            "tag": "international students",
+            "patterns": ["Do you accept international students", "What are the admission requirements for international students"],
+            "responses": ["Yes, we welcome international students. The admission requirements for international students vary depending on the program you are applying to. You can find more information on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "health services",
+            "patterns": ["Do you offer health services for students", "How do I access health services","Is a doctor available in the campus?"],
+            "responses": ["Yes, we offer health services for students","We have an in campus health facility, which you can access in case of any emergency","Yes a doctor is also available in the campus during office hours whereas our health facility remains open 24/7."]
+        },
+        {
+            "tag": "course registration",
+            "patterns": ["When can I register for classes", "How do I register for classes"],
+            "responses": ["Course registration typically takes place before the start of each semester. You can find more information on our website or by contacting the registrar's office."]
+        },
+        {
+            "tag": "academic advising",
+            "patterns": ["Do you offer academic advising", "How do I meet with an academic advisor"],
+            "responses": ["Yes, we offer academic advising for students. You can find more information on our website or by contacting the academic advising office."]
+        },
+        {
+            "tag": "orientation",
+            "patterns": ["Is there an orientation for new students", "When is orientation"],
+            "responses": ["Yes, we offer an orientation program for new students. You can find more information on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "enrollment deposit",
+            "patterns": ["Do I need to pay an enrollment deposit", "When is the enrollment deposit due"],
+            "responses": ["Yes, you may be required to pay an enrollment deposit. The amount and due date vary depending on the program you are applying to. You can find more information on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "deferral",
+            "patterns": ["Can I defer my admission", "What is the process for deferral"],
+            "responses": ["Yes, you may be able to defer your admission. The process for deferral varies depending on the program you are applying to. You can find more information on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "admission decision",
+            "patterns": ["When will I hear back about my admission decision", "How long does it take to make a decision"],
+            "responses": ["The time it takes to make an admission decision varies depending on the program you are applying to. You can find more information on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "campus life",
+            "patterns": ["What is campus life like", "What kind of activities are available"],
+            "responses": ["We have a vibrant campus life with many activities and organizations for students. You can find more information on our website or by contacting the student life office."]
+        },
+        {
+            "tag": "housing",
+            "patterns": ["Do you offer on-campus housing", "What are the housing options"],
+            "responses": ["Yes, we offer on-campus housing for students. You can find more information about the housing options on our website or by contacting the housing office."]
+        },
+        {
+            "tag": "cost of attendance",
+            "patterns": ["What is the cost of attendance", "How much does it cost to attend"],
+            "responses": ["The cost of attendance varies depending on the program you are applying to. You can find more information on our website or by contacting the admissions office."]
+        },
+        {
+            "tag": "admission",
+            "patterns": [
+                "What is the procedure to get admission in FAST?"
+            ],
+            "responses": [
+                "First you have to apply through the website, After that you have to set preferences and make your merit for the desired program then you can submit the fee and get an admission"
+            ]
+        },
+        {
+            "tag": "programs",
+            "patterns": [
+                "What programs are offered in FAST?"
+            ],
+            "responses": [
+                "Variety of Programs are offered in FAST such as BS Computer Sciences, BS Electrical Engineering, BS Software Engineering, Bachelors in Business Administration. For more information read FAST Prospectues."
+            ]
+        },
+        {
+            "tag": "merits",
+            "patterns": [
+                "How is the merit of bs cs calculated in FAST?"
+            ],
+            "responses": [
+                "The merit of BS CS is calculated 50% on the basis of Fast Admission Test and 50% on the basis of your FSC result."
+            ]
+        },
+        {
+            "tag": "admission schedule",
+            "patterns": [
+                "What is the schedule of admissions in FAST?"
+            ],
+            "responses": [
+                "The admission starts in May and are open till the end of June. For exact dates visit our website."
+            ]
+        },
+        {
+            "tag": "apply to FAST",
+            "patterns": [
+                "How to apply in FAST?"
+            ],
+            "responses": [
+                "Create an account on our website. Fill out the details and submit applying fee. Then you have to pass the admission test."
+            ]
+        },
+        {
+            "tag": "scholarship",
+            "patterns": [
+                "Can I get a scholarship in FAST?"
+            ],
+            "responses": [
+                "Yes you can get a scholarship in FAST. FAST provides multiple scholarships to its students, Moreover you can also apply on Financial Assistance. For more information contact pur campus representative."
+            ]
+        },
+        {
+            "tag": "test pattern",
+            "patterns": [
+                "What is test pattern of admission test in FAST?"
+            ],
+            "responses": [
+                "The test contains questions from Mathematics, Physics, Analytical Skills and English. Each portion has  a specific weight."
+            ]
+        },
+        {
+            "tag": "fee structure",
+            "patterns": [
+                "What is the fee structure in FAST?"
+            ],
+            "responses": [
+                "The fee is calculatraed in terms of Credit Hour. The fee for first semester ramges from 150K-200K depending upon your credit hours,admission processing fee and other variables."
+            ] 
+        },
+        {
+            "tag": "courses",
+            "patterns": [
+                "What courses will I study in FAST?"
+            ],
+            "responses": [
+                "You will study different courses in the span of 4 years depending upon the program you choose."
+            ]
+        },
+        {
+            "tag": "hostel",
+            "patterns": [
+                "Is Hostel Facility available in FAST?"
+            ],
+            "responses": [
+                "Currently on campus hostel facility is only available at FAST-Chiniot Faisalabad Campus."
+            ]
+        },
+        {
+            "tag": "hostel room",
+            "patterns": [
+                "How do I get a room in FAST Hostel?"
+            ],
+            "responses": [
+                "You can get a form for accomodations from FAST FAISALABAD Hostel office. Fill it out and submit the fee. You will be accomodated in the hostel."
+            ]
+        },
+
+        {   "tag": "room change",
         "patterns": [
-            "what is your name",
-            "what should I call you",
-            "whats your name?"
-    ],
+            "How can I change my room in hostel?"
+        ],
         "responses": [
-            "You can call me FASTBot.",
-            "I'm FASTBot!",
-            "The name's Bot. FASTBot."
+            "You can change your room by submitting an application to the hostel supervisor office."
         ]
-    },
-    {   
-        "tag": "admission",
-        "patterns": [
-            "What is the procedure to get admission in FAST?"
-    ],
-        "responses": [
-            "First you have to apply through the website, After that you have to set preferences and make your merit for the desired program then you can submit the fee and get an admission"
-        ]
-    },
-    {   
-        "tag": "programs",
-        "patterns": [
-            "What programs are offered in FAST?"
-    ],
-        "responses": [
-            "Variety of Programs are offered in FAST such as BS Computer Sciences, BS Electrical Engineering, BS Software Engineering, Bachelors in Business Administration. For more information read FAST Prospectues."
+        },
+        {
+            "tag": "room luggage",
+            "patterns": [
+                "Is room for luggage provided in the hostel"                
+            ],
+            "responses": [
+                "Yes a closet will be provided in the room."
+            ]
+        },
+        {
+            "tag": "mosque",
+            "patterns": [
+                "Is Mosque avaialbe in hostel?"                
+            ],
+            "responses": [
+                "Yes there is a mosque situated in the hostel as well as in the campus."
+            ]
+        },
+        {
+            "tag": "hostel fee",
+            "patterns": [
+                "What are the dues for Hostel?",
+                "what is the fee fot hostel",
+                "what are hotel room charges"
+            ],
+            "responses": [
+                "The dues for hostel currently for a shared room in boys hostel are 41000-/ PKR , for a single room 55000-/ PKR, for double room 48000-/ PKR. Yoy may need to submit hostel security fee and mess security fee if you're getting a room for the first time which are 8000-/ and 7000-/ respectively."
+            ]
+        },
+        {
+            "tag": "program change",
+            "patterns": ["Can I change my program during the degree?"
+            ],
+            "responses": [
+                "Yes it may be permissable under most of the curcumstances for a specific time limit. For exact details you should contact the academic office.                "
+            ]
+        },
+        {
+            "tag": "transfer degree",
+            "patterns": ["Can I transfer my degree from any campus to Fast Faisalabad?"
+            ],
+            "responses": [
+                "Yes you can transfer tour program from any other campus of FAST to Fast Faisalabd after completing the requirements."
+            ]
+        },
+        {
+            "tag": "credit hours",
+            "patterns": [
+                "How many credit hours are there in BS Program?"                
+            ],
+            "responses": [
+                "Threre are a total of 130 credit hours required for a undergraduate degree program."
+            ]
+        },
+        {
+            "tag": "credit hours",
+            "patterns": [
+                "What is the cost of 1 credit hours?"
+            ],
+            "responses": [
+                "The tentative tuition fee per credit hours is 8500-/ PKR for the academic year 2021-2022."
+            ]
+        },
+        {
+            "tag": "admission fee",
+            "patterns": [
+                "What is the admission fee?"
+            ],
+            "responses": [
+                "Admission Fee of Rs 20,000 is payable once at the time of admission."
+            ]
+        },
+        {
+            "tag": "security fee",
+            "patterns": [
+                "What is the security fee ?"
+            ],
+            "responses": [
+                "A refundable security deposit of Rs 20,000 is also payable at the time of admission."
+            ]
+        },
+        {
+            "tag": "With-holding tax",
+            "patterns": [
+                "Is there any With-holding tax on the fee?"
+            ],
+            "responses": [
+                "University shall collect advance tax from a person not appearing on the active taxpayers list (ATL) at 5% on the entire amount of fee paid, provided that annual fee paid exceeds Rs. 200,000."
+            ]
+        },
+        {
+            "tag": "fee refund",
+            "patterns": [
+                "What is the fee refund policy of Fast?"
+            ],
+            "responses": [
+                "Tuition Fee is refunded in accordance with the guidelines of Higher Education Commission (HEC)."
+            ]
+        },
+        {
+            "tag": "admission fee",
+            "patterns": [
+                "Is admission fee refundable?"
+            ],
+            "responses": [
+                "No the admission fee is not refundable."
+            ]
+        },
+        {
+            "tag": "tuition fee",
+            "patterns": [
+                "How can I pay my tuition fee at FAST?"
+            ],
+            "responses": [
+                "You can pay your tuition fee at any branch of Faysal Bank, Moreover you can also pay through QuickPay. For more details visit fee section in Flex,"
+            ]
+        },
+        {
+            "tag": "complaint",
+            "patterns": [
+                "How can I lodge my complaint if anything goes wrong?"
+            ],
+            "responses": [
+                "There is a complaint management system in place at FAST Faisalabad. Moreover you can also email your complaint to the relevant authorities."
+            ]
+        },
+
+        {
+            "tag": "hostel meals",
+            "patterns": [
+                "How many meals are served in hostel?"
+            ],
+            "responses": [
+                "3 meals are served in the mess regularly. Breakfast, Lunch and Dinner."
+            ]
+        },
+        {
+            "tag": "meal cost",
+            "patterns": [
+                "What is the costs of meal in hostel?"
+            ],
+            "responses": [
+                "The cost of meals vary according to the meal being served."
+            ]
+        },
+        {
+            "tag": "room types",
+            "patterns": [
+                "What type of rooms are avilable in FAST?"
+            ],
+            "responses": [
+                "For Boys:- Single, Double and Shared Rooms are availabe in the hostel, For Girls:- Shared Rooms are availabe in the hostel."
+            ]
+        },
+        {
+            "tag": "shared room",
+            "patterns": [
+                "How many students are there in a shared room?"
+            ],
+            "responses": [
+                "There are a total of 6 students in a shared room."
+            ]
+        },
+        {
+            "tag": "single room cost",
+            "patterns": [
+                "What are the dues of a single person room?",
+                "what is the cost of single person room"
+            ],
+            "responses": [
+                "The dues of a single room are 55000 -/ PKR."
+            ]
+        },
+        {
+            "tag": "shared room cost",
+            "patterns": [
+                "What are the dues for a shared room?",
+                "what is the cost of shared room"
+            ],
+            "responses": [
+                "The dues of a shared room are 41000-/ PKR."
+            ]
+        },
+        {
+            "tag": "campus change",
+            "patterns": [
+                "What is the process to change FAST Campus?"
+            ],
+            "responses": [
+                "You can change the campus by appearing on the merit of your desired campus and program upon retaking Fast admission test."
+            ]
+        },
+        {
+            "tag": "credit transfer",
+            "patterns": [
+                "Are credits tranferred when I change a campus?"
+            ],
+            "responses": [
+                "Yes, the credits are transferred when you change a campus."
+            ]
+        },
+        {
+            "tag": "sports facility",
+            "patterns": [
+                "Are there any sports facility available in the campus?"
+            ],
+            "responses": [
+                "Yes there are a lot of sports facilities availabe in FAST Faisalabad, including table tennis, cricket, football, futsal and badminton."
+            ]
+        },
+        {
+            "tag": "gym",
+            "patterns": [
+                "Is there a gym in Fast Faisalabad Hostel?"
+            ],
+            "responses": [
+                "Yes there is a gym available in the hostel, you can get the membership once you are allocated a room in the hostel."
+            ]
+        },
+        {
+            "tag": "campus size",
+            "patterns": [
+                "How big is Faisalabad Campus of Fast?"
+            ],
+            "responses": [
+                "FAST Faisalabad is a big campus compring almost 30 acres of Land."
+            ]
+        },
+        {
+            "tag": "campus location",
+            "patterns": [
+                "Where is FAST Faisalabad located?"
+            ],
+            "responses": [
+                "FAST Faisalabd is located at Sargodha Road, 10km from the Motorway Interchange at Loonaywala Stop."
+            ]
+        },
+        {
+            "tag": "night cafe",
+            "patterns": [
+                "Is there a night cafe in Fast Faisalabad hostel?"
+            ],
+            "responses": [
+                "Yes there is a night café (Dhaba) available at Fast Faisalabad."
+            ]
+        },
+        {
+            "tag": "degree",
+            "patterns": [
+                "Is it tough to get a degree from Fast?"
+            ],
+            "responses": [
+                "Its certainly challenging but if you're detrmined then you'll get all the help you need."
+            ]
+        },
+        {
+            "tag": "duration BS programs",
+            "patterns": [
+                "What is the duration of BS Programs in FAST?"
+            ],
+            "responses": [
+                "The duration of BS Program is 4-years which consist of 8 semesters."
+            ]
+        },
+        {
+            "tag": "duration MS programs",
+            "patterns": [
+                "What is the duration of MS Program in FAST?"
+            ],
+            "responses": [
+                "The duration of MS Programs is 2 years as mandated by the HEC."
+            ]
+        },
+        {
+            "tag": "PHD",
+            "patterns": [
+                "Is PHD Program available at FAST?"
+            ],
+            "responses": [
+                "Yes PHD Programs are available at FAST, under the supervision of HEC Approved Phd supervisors?"
+            ]
+        },
+        {
+            "tag": "labs",
+            "patterns": [
+                "Are modern labs available at Fast?"
+            ],
+            "responses": [
+                "Yes All campuses of FAST have modern up to date labs available."
+            ]
+        },
+        {
+            "tag": "internet",
+            "patterns": [
+                "Is internet available at FAST?"
+            ],
+            "responses": [
+                "Yes the whole campus is under internet coverage."
+            ]
+        },
+        {
+            "tag": "admission",
+            "patterns": [
+                "What is the procedure to get admission in FAST?"
+            ],
+            "responses": [
+                "First you have to apply through the website, After that you have to set preferences and make your merit for the desired program then you can submit the fee and get an admission"
+            ]
+        },
+        {
+            "tag": "programs",
+            "patterns": [
+                "What programs are offered in FAST?"
+            ],
+            "responses": [
+                "Variety of Programs are offered in FAST such as BS Computer Sciences, BS Electrical Engineering, BS Software Engineering, Bachelors in Business Administration. For more information read FAST Prospectues."
+            ]
+        },
+        {
+            "tag": "merits",
+            "patterns": [
+                "How is the merit calculated in FAST?"
+            ],
+            "responses": [
+                "The merit is calculated 50% on the basis of Fast Admission Test and 50% on the basis of your FSC result."
+            ]
+        },
+        {
+            "tag": "admission schedule",
+            "patterns": [
+                "What is the schedule of admissions in FAST?"
+            ],
+            "responses": [
+                "The admission starts in May and are open till the end of June. For exact dates visit our website."
+            ]
+        },
+        {
+            "tag": "apply to FAST",
+            "patterns": [
+                "How to apply in FAST?"
+            ],
+            "responses": [
+                "Create an account on our website. Fill out the details and submit applying fee. Then you have to pass the admission test."
+            ]
+        },
+        {
+            "tag": "scholarship",
+            "patterns": [
+                "Can I get a scholarship in FAST?"
+            ],
+            "responses": [
+                "Yes you can get a scholarship in FAST. FAST provides multiple scholarships to its students, Moreover you can also apply on Financial Assistance. For more information contact pur campus representative."
+            ]
+        },
+        {
+            "tag": "test pattern",
+            "patterns": [
+                "What is test pattern of admission test in FAST?"
+            ],
+            "responses": [
+                "The test contains questions from Mathematics, Physics, Analytical Skills and English. Each portion has  a specific weight."
+            ]
+        },
+        {
+            "tag": "fee structure",
+            "patterns": [
+                "What is the fee structure in FAST?"
+            ],
+            "responses": [
+                "The fee is calculated in terms of Credit Hour. The fee for first semester ranges from 150K-200K depending upon your credit hours,admission processing fee and other variables."
+            ]
+        },
+        {
+            "tag": "courses",
+            "patterns": [
+                "What courses will I study in FAST?"
+            ],
+            "responses": [
+                "You will study different courses in the span of 4 years depending upon the program you choose."
+            ]
+        },
+        {
+            "tag": "hostel",
+            "patterns": [
+                "Is Hostel Facility available in FAST?"
+            ],
+            "responses": [
+                "Currently on campus hostel facility is only available at FAST-Chiniot Faisalabad Campus."
+            ]
+        },
+        {
+            "tag": "hostel room",
+            "patterns": [
+                "How do I get a room in FAST Hostel?"
+            ],
+            "responses": [
+                "You can get a form for accomodations from FAST FAISALABAD Hostel office. Fill it out and submit the fee. You will be accomodated in the hostel."
+            ]
+        },
+        {
+            "tag": "hostel fee",
+            "patterns": [
+                "What are the dues for Hostel?",
+                "what is the fee fot hostel",
+                "what are hotel room charges"
+            ],
+            "responses": [
+                "The dues for hostel currently for a shared room in boys hostel are 41000-/ PKR , for a single room 55000-/ PKR, for double room 48000-/ PKR. Yoy may need to submit hostel security fee and mess security fee if you're getting a room for the first time which are 8000-/ and 7000-/ respectively."
+            ]
+        },
+        {
+            "tag": "hostel meals",
+            "patterns": [
+                "How many meals are served in hostel?"
+            ],
+            "responses": [
+                "3 meals are served in the mess regularly. Breakfast, Lunch and Dinner."
+            ]
+        },
+        {
+            "tag": "meal cost",
+            "patterns": [
+                "What is the costs of meal in hostel?"
+            ],
+            "responses": [
+                "The cost of meals vary according to the meal being served."
+            ]
+        },
+        {
+            "tag": "room types",
+            "patterns": [
+                "What type of rooms are avilable in FAST?"
+            ],
+            "responses": [
+                "For Boys:- Single, Double and Shared Rooms are availabe in the hostel, For Girls:- Shared Rooms are availabe in the hostel."
+            ]
+        },
+        {
+            "tag": "shared room",
+            "patterns": [
+                "How many students are there in a shared room?"
+            ],
+            "responses": [
+                "There are a total of 6 students in a shared room."
+            ]
+        },
+        {
+            "tag": "single room cost",
+            "patterns": [
+                "What are the dues of a single person room?",
+                "what is the cost of single person room"
+            ],
+            "responses": [
+                "The dues of a single room are 55000 -/ PKR."
+            ]
+        },
+        {
+            "tag": "shared room cost",
+            "patterns": [
+                "What are the dues for a shared room?",
+                "what is the cost of shared room"
+            ],
+            "responses": [
+                "The dues of a shared room are 41000-/ PKR."
+            ]
+        },
+        {
+            "tag": "campus change",
+            "patterns": [
+                "What is the process to change FAST Campus?"
+            ],
+            "responses": [
+                "You can change the campus by appearing on the merit of your desired campus and program upon retaking Fast admission test."
+            ]
+        },
+        {
+            "tag": "credit transfer",
+            "patterns": [
+                "Are credits tranferred when I change a campus?"
+            ],
+            "responses": [
+                "Yes, the credits are transferred when you change a campus."
+            ]
+        },
+        {
+            "tag": "sports facility",
+            "patterns": [
+                "Are there any sports facility available in the campus?"
+            ],
+            "responses": [
+                "Yes there are a lot of sports facilities availabe in FAST Faisalabad, including table tennis, cricket, football, futsal and badminton."
+            ]
+        },
+        {
+            "tag": "gym",
+            "patterns": [
+                "Is there a gym in Fast Faisalabad Hostel?"
+            ],
+            "responses": [
+                "Yes there is a gym available in the hostel, you can get the membership once you are allocated a room in the hostel."
+            ]
+        },
+        {
+            "tag": "campus size",
+            "patterns": [
+                "How big is Faisalabad Campus of Fast?"
+            ],
+            "responses": [
+                "FAST Faisalabad is a big campus compring almost 30 acres of Land."
+            ]
+        },
+        {
+            "tag": "campus location",
+            "patterns": [
+                "Where is FAST Faisalabad located?"
+            ],
+            "responses": [
+                "FAST Faisalabd is located at Sargodha Road, 10km from the Motorway Interchange at Loonaywala Stop."
+            ]
+        },
+        {
+            "tag": "night cafe",
+            "patterns": [
+                "Is there a night cafe in Fast Faisalabad hostel?"
+            ],
+            "responses": [
+                "Yes there is a night café (Dhaba) available at Fast Faisalabad."
+            ]
+        },
+        {
+            "tag": "degree",
+            "patterns": [
+                "Is it tough to get a degree from Fast?"
+            ],
+            "responses": [
+                "Its certainly challenging but if you're detrmined then you'll get all the help you need."
+            ]
+        },
+        {
+            "tag": "duration BS programs",
+            "patterns": [
+                "What is the duration of BS Programs in FAST?"
+            ],
+            "responses": [
+                "The duration of BS Program is 4-years which consist of 8 semesters."
+            ]
+        },
+        {
+            "tag": "duration MS programs",
+            "patterns": [
+                "What is the duration of MS Program in FAST?"
+            ],
+            "responses": [
+                "The duration of MS Programs is 2 years as mandated by the HEC."
+            ]
+        },
+        {
+            "tag": "PHD",
+            "patterns": [
+                "Is PHD Program available at FAST?"
+            ],
+            "responses": [
+                "Yes PHD Programs are available at FAST, under the supervision of HEC Approved Phd supervisors?"
+            ]
+        },
+        {
+            "tag": "labs",
+            "patterns": [
+                "Are modern labs available at Fast?"
+            ],
+            "responses": [
+                "Yes All campuses of FAST have modern up to date labs available."
+            ]
+        },
+        {
+            "tag": "internet",
+            "patterns": [
+                "Is internet available at FAST?"
+            ],
+            "responses": [
+                "Yes the whole campus is under internet coverage."
+            ]
+        },
+        {
+            "tag": "application deadline",
+            "patterns": [
+                "What is the application deadline for the upcoming semester at FAST University?"
+            ],
+            "responses": [
+                "Application for admisssions starts from June and ends in July . You can visit our website for the information ."
+            ]
+        },
+        
+        {
+            "tag": "bs selection criteria ",
+            "patterns": ["What is the selection criteria for Bachelors?"],
+            "responses": ["Selection Crieria for Bachelors is as follows:- 50% weight to higher percent score of SSC (or an equivalent exam) OR HSSC (or an equivalent exam) and 50% weight to marks obtained in Admission Test."]
+      
+        }
+        ,
+        {
+            "tag": "masters selection criteria",
+            "patterns": ["What is the selection criteria for Masters?"],
+            "responses": ["Selection Criteria of Master is as follows:- Past Academic Record (Bachelor): 50% and Performance in NU subject Admission Test: 50%"]
+      
+        }
+        ,
+        {
+            "tag": "bachelors selection criteria ",
+            "patterns": ["What is the selection criteria for Bachelors?"],
+            "responses": ["Selection Crieria for Bachelors is as follows:- 50% weight to higher percent score of SSC (or an equivalent exam) OR HSSC (or an equivalent exam) and 50% weight to marks obtained in Admission Test."]
+      
+        }
+        ,
+        {
+            "tag": "ms selection criteria",
+            "patterns": ["What is the eligibilty criteria for ms?"],
+            "responses": ["Selection Criteria of Master is as follows:- Past Academic Record (Bachelor): 50% and Performance in NU subject Admission Test: 50%"]
+      
+        }
+        ,
+        {
+            "tag": "masters eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for Masters?"],
+            "responses": ["Eligibility Criteria of MS is as follows:-  Degree in relevant subject earned after 16 years of education from an HEC recognized university and At least 60% marks or CGPA of at least 2.0 (on a scale of 4.0) and Two years of post qualification experience in software development or related area."]
+      
+        }
+        ,
+        {
+            "tag": "masters in computer science eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for masters in computer sciences?"],
+            "responses": ["Eligibility Criteria of MS CS is as follows:-  Degree in relevant subject earned after 16 years of education from an HEC recognized university and At least 60% marks or CGPA of at least 2.0 (on a scale of 4.0) and Two years of post qualification experience in software development or related area."]
+      
+        }
+        ,
+        {
+            "tag": "ms in computer eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for ms in computer science?"],
+            "responses": ["Eligibility Criteria of MS CS is as follows:-  Degree in relevant subject earned after 16 years of education from an HEC recognized university and At least 60% marks or CGPA of at least 2.0 (on a scale of 4.0) and Two years of post qualification experience in software development or related area."]
+      
+        }
+        ,
+        {
+            "tag": "ms cs eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for ms cs?"],
+            "responses": ["Eligibility Criteria of MS CS is as follows:-  Degree in relevant subject earned after 16 years of education from an HEC recognized university and At least 60% marks or CGPA of at least 2.0 (on a scale of 4.0) and Two years of post qualification experience in software development or related area."]
+      
+        }
+        ,
+        {
+            "tag": "masters in cs eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for masters in cs?"],
+            "responses": ["Eligibility Criteria of MS CS is as follows:-  Degree in relevant subject earned after 16 years of education from an HEC recognized university and At least 60% marks or CGPA of at least 2.0 (on a scale of 4.0) and Two years of post qualification experience in software development or related area."]
+      
+        }
+        ,
+        {
+            "tag": "bachelors in business administration eligibility_criteria",
+            "patterns": ["What is the eligibilty criteria for bba?"],
+            "responses": ["Eligibility Criteria of BBA is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "bba eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for bachelors in business administration?"],
+            "responses": ["Eligibility Criteria of Bachelors in Business Administration is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "bs engineering eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for bs engineering?"],
+            "responses": ["Eligibility Criteria of Engineering is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "bs computer science eligibility criteria",
+            "patterns": ["What is the eligibility criteria for bs in computer science?"],
+            "responses": ["Eligibility Criteria of BS CS is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "bachelors in cs eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for bachelors in cs?"],
+            "responses": ["Eligibility Criteria of BS CS is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "bachelors in computer science admission criteria",
+            "patterns": ["What is the eligibilty criteria for bachelors in computer science?"],
+            "responses": ["Eligibility Criteria of BS CS is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "bs cs eligibility criteria",
+            "patterns": ["What is the eligibilty criteria for bs cs?"],
+            "responses": ["Eligibility Criteria of BS CS is as follows:- At least 60% marks in SSC (Matric) or an equivalent examination (such as O-levels) and should have studied for HSSC or an equivalent qualification, for at least two years and At least 60% marks in the Pre-Engineering or an equivalent examination"]
+      
+        }
+        ,
+        {
+            "tag": "foreign national",
+            "patterns": ["I am a foreign national can I apply in FAST?"],
+            "responses": ["Yes you can apply in fast if you're a foreign national. You must submit an NOC from the Ministry of Education."]
+      
+        }
+        ,
+        {
+            "tag": "admit card",
+            "patterns": ["what is admit card? Do I need the admit card to appear in the exam?"],
+            "responses": ["Admit Card is the verification that you are an eligible candidate. You must carry it with you on the dat of admission test."]
+      
+        }
+        ,
+        {
+            "tag": "admission application fee refundable",
+            "patterns": ["Is admission application fee refundable?"],
+            "responses": ["The application admission fee is non-refundable."]
+      
+        }
+        ,
+        {
+            "tag": "application challan",
+            "patterns": ["What is application challan?", "Where can I submit my application admission fee?"],
+            "responses": ["Application Challan is generated on admission portal after you have complete your registration. You can pay the challan at any branch of Faysal Bank."]
+      
+        }
+        ,
+        {
+            "tag": "arn",
+            "patterns": ["what is arn?", "Do I need arn?"],
+            "responses": ["The online system assigns a unique Application Reference Number (ARN) to each applicant, which must be noted for later use."]
+      
+        }
+        ,
+        {
+            "tag": "post applications",
+            "patterns": ["can I mail my application through mail or tcs?"],
+            "responses": ["No, only online applications through Fast Admission Portal are accepted."]
+      
+        }
+        ,
+        {
+            "tag": "phd admission test pattern",
+            "patterns": ["what is the pattern of phd admission test? "],
+            "responses": ["The PhD admission test contains 100 MCQ's from programming, automata, operating systems,database, oop artificial intelligence and algorithms domain plus 30% weghtage is for Essay Writing."]
+      
+        }
+        ,
+        {
+            "tag": "sample admission tests",
+            "patterns": ["Where can I found old admission tests?"],
+            "responses": ["You can find old admission test sample papers on our webiste as well as on the internet."]
+      
+        }
+        ,
+        {
+            "tag": "ms computing admission test pattern",
+            "patterns": ["what is the pattern of ms admission test? Describe masters admission test pattern? Tell me about ms admission test pattern?"],
+            "responses": ["MS Program test pattern is as follows:- Essay Writing 10%, Analytical Skills and IQ 30%,Specialization Area 30%,Quantitative Methods 30%."]
+      
+        }
+        ,
+        {
+            "tag": "master of business administration admission test pattern",
+            "patterns": ["what is the pattern of mba admission test? Describe master in business administration admission test pattern? Tell me about ms admission test pattern?"],
+            "responses": ["MBA test pattern is as follows:- English 10%, Analytical Skills and IQ 20%,Essay Writing 30%,Quantitaive Methods 20%,Business Related Knowledge 20%."]
+      
+        }
+        ,
+        {
+            "tag": "mba admission test pattern",
+            "patterns": ["what is the pattern of mba admission test? Describe master in business administration admission test pattern? Tell me about ms admission test pattern?"],
+            "responses": ["MBA test pattern is as follows:- English 10%, Analytical Skills and IQ 20%,Essay Writing 30%,Quantitaive Methods 20%,Business Related Knowledge 20%."]
+      
+        }
+        ,
+        {
+            "tag": "ee test pattern",
+            "patterns": ["what is the pattern of electrical engineering admission test? Describe ee admission test pattern? Tell me about ee admission test pattern?"],
+            "responses": ["CS and Engineering Admission test pattern is as follows:- English 10%, Analytical Skills and IQ 20%,Basic Math 20%,Advance Math 50%."]
+      
+        }
+        ,
+        {
+            "tag": "computer science admission test pattern",
+            "patterns": ["what is the pattern of cs admission test? Describe computer science admission test pattern? Tell me about cs admission test pattern?"],
+            "responses": ["CS and Engineering Admission test pattern is as follows:- English 10%, Analytical Skills and IQ 20%,Basic Math 20%,Advance Math 50%."]
+      
+        }
+        ,
+        {
+            "tag": "bba test pattern",
+            "patterns": ["what is the pattern of bba admission test? Describe bachelors of business  admission test pattern? Tell me about ee admission test pattern?"],
+            "responses": ["BBA and BS Admission test pattern is as follows:- English 10%, Analytical Skills and IQ 25%,Essay Writing 15%,Basic Math 50%."]
+      
+        }
+        ,
+        {
+            "tag": "bachelors of business administration test pattern",
+            "patterns": ["what is the pattern of bba admission test? Describe bachelors of business  admission test pattern? Tell me about ee admission test pattern?"],
+            "responses": ["BBA and BS Admission test pattern is as follows:- English 10%, Analytical Skills and IQ 25%,Essay Writing 15%,Basic Math 50%."]
+      
+        }
+        ,
+        {
+            "tag": "electrical engineering test_pattern",
+            "patterns": ["what is the pattern of electrical engineering admission test? Describe ee admission test pattern? Tell me about ee admission test pattern?"],
+            "responses": ["CS and Engineering Admission test pattern is as follows:- English 10%, Analytical Skills and IQ 20%,Basic Math 20%,Advance Math 50%."]
+      
+        }
+        ,
+        {
+            "tag": "cs admission test pattern",
+            "patterns": ["what is the pattern of cs admission test? Describe computer science admission test pattern? Tell me about cs admission test pattern?"],
+            "responses": ["CS and Engineering Admission test pattern is as follows:- English 10%, Analytical Skills and IQ 20%,Basic Math 20%,Advance Math 50%."]
+      
+        }
+        ,
+        {
+            "tag": "admission test details",
+            "patterns": ["what is the composition of admission test?, What is the percentage of each subject in admission test, what subjects are included in the admission test?, What is the test pattern of fast admission test?"],
+            "responses": ["The pattern for admission test vary by each program."]
+      
+        }
+        ,
+        {
+            "tag": "number of admission test",
+            "patterns": ["How many times can I give admission test?"],
+            "responses": ["You can give 1 admission test in an academic year"]
+      
+        }
+        ,
+        {
+            "tag": "score in fast admission test",
+            "patterns": ["How much score do I need in FAST Admission test?"],
+            "responses": ["There is no bar set for the score in Fast Admission Test. You just need to appear on the merit."]
+      
+        }
+        ,
+        {
+            "tag": "marks in fsc",
+            "patterns": ["How much marks do I need in FSc to secure a seat in Fast?"],
+            "responses": ["As per HEC Policy you need to secure at least 60% marks in FSc."]
+      
+        }
+        ,
+        {
+            "tag": "secure seat",
+            "patterns": ["How can I secure a seat in Fast Faisalabad?"],
+            "responses": ["You need to secure a seat by appearing on the merit. Merit changes every year"]
+      
+        }
+        ,
+        {
+            "tag": "previous merit",
+            "patterns": ["What was the previous merit of Fast Faisalabad?"],
+            "responses": ["As per our policy we don’t disclose the closing merit."]
+      
+        }
+        ,
+        {
+            "tag": "applied in islamabad",
+            "patterns": ["I applied in FAST Islamabad, Can I get an admission in FAST Faisalabad?"],
+            "responses": ["Yes you can still get admission in Faisalabad, Contact our admission office immediately as the number of seats are limited."]
+      
+        }
+        ,
+        {
+            "tag": "applied in lahore",
+            "patterns": ["I applied in FAST Lahore, Can I get an admission in FAST Faisalabad?"],
+            "responses": ["Yes you can still get admission in Faisalabad, Contact our admission office immediately as the number of seats are limited."]
+      
+        }
+        ,
+        {
+            "tag": "did not apply in fast faisalabad",
+            "patterns": ["I did not apply in FAST Faisalabad, Can I still get an admission?"],
+            "responses": ["Yes you can still get admission in Faislabad, If there are seats available. If you want to get an admission contact our admission office immediately."]
+      
+        }
+        ,
+        {
+            "tag": "transfer seat",
+            "patterns": ["Can I transfer my seat from any other campus to Faisalabad?"],
+            "responses": ["Yes you can transfer your program and credit hours from any other campus to Faisalabad by completing the requirements."]
+      
+        }
+        ,
+        {
+            "tag": "Daira",
+            "patterns": ["What is Daira?"],
+            "responses": ["Daira is our annual olympiad which is held annually in March. Autoshow, Pet Show, Theatre and skill tests every competition category is included in Daira."]
+      
+        }
+        ,
+        {
+            "tag": "cricket league",
+            "patterns": ["Does fast hold cricket league?"],
+            "responses": ["Yes we have a special tournamel called FAST Cricket League. Bidding is done to own the best teams. Winner is rewarded with a hefty amount."]
+      
+        }
+        ,
+        {
+            "tag": "recreational actvities",
+            "patterns": ["what recreational activities are avialbale at fast?"],
+            "responses": ["Fast has a variety of recreational activities. Daira our Annual Olympiad is held each year in March which attracts audience and participants from all across the country."]
+      
+        }
+        ,
+        {
+            "tag": "sports activities",
+            "patterns": ["what type of sports activities are available in fast? "],
+            "responses": [" Fast Faisalabad has a variety of sports activities. Our sports society organizes Fast Premiere Football Leagues, Night Crciket Leagues as well as table tennis, badminton and fusball tournaments each semester."]
+      
+        }
+        ,
+        {
+            "tag": "fast premiere league",
+            "patterns": ["What is Fast Primere League?"],
+            "responses": ["FAST premiere league is our premiere foorball league which is held each semester."]
+      
+        }
+        ,
+
+
+        {
+            "tag": "Airconditioners in classrooms",
+            "patterns": ["Are the classes airconditioned?","Are there air conditioners available in classrooms?","Is the campus centrally air conditioned?"],
+            "responses": ["Yes, air conditioners are available in every classroom and every other facility within the campus."]
+      
+        } ,
+
+        {
+            "tag": "Airconditioners at hostel",
+            "patterns": ["Are rooms at hostel air conditioned?"],
+            "responses": ["No, hostel rooms are not air conditioned."]
+      
+        } ,
+
+        {
+            "tag": "library for hostelites",
+            "patterns": ["Can hostelites use library after 5pm","Does hostel has library?"],
+            "responses": ["Yes, hostelites can use the library after 5pm during mids and before finals."]
+      
+        } ,
+
+        {
+            "tag": "microwave at hostel",
+            "patterns": ["Is microwave available at hostel?"],
+            "responses": ["Yes, microwave is available at hostel?"]
+      
+        } ,
+
+        {
+            "tag": "refrigerator at hostel?",
+            "patterns": ["Is refrigerator available at hostel?","Can students use refrigerator at hostel?"],
+            "responses": ["Yes, refrigerator is available at hostel and students can use it."]
+      
+        } ,
+
+        {
+            "tag": "hostel mess schedule",
+            "patterns": ["What is the hostel mess schedule?"],
+            "responses": ["Hostel mess schedule is changed monthly. Every new schedule is mailed to the students monthly."]
+      
+        } ,
+
+        {
+            "tag": "hostel fee installments",
+            "patterns": ["Can I pay me hostel fee in installments?","Is installment option available for hostel fee submission?"],
+            "responses": ["Under special cases, hostel fee can also be submitted in installments. You have to submit a General Request Form stating the reason and get it approved by the administration and submit it to the accounts office."]
+      
+        } ,
+
+        {
+            "tag": "duration of bs degree",
+            "patterns": ["what is the maximum and minimum duration of bs cs","what is the maximum and minimum duration of bs ee","what is the maximum and minimum duration of bbs"],
+            "responses": ["As mandated by HEC, BS Programs have a duration of 4 Years in FAST."]
+      
+        } ,
+
+        {
+            "tag": "disciplinary committee",
+            "patterns": ["What is fast disciplinary committee?","what id dc in fast","what is dc?"],
+            "responses": ["DC stands for disciplinary committee in FAST which ensures that the student code of conduct is being followed properly."]
+      
+        } ,
+
+        {
+            "tag": "gpa calculation",
+            "patterns": ["how is cgpa calculated?"],
+            "responses": ["CGPA is calculated on the basis of grades, each grade carries a fixed score out of a total score of 4.They are combined together at the end of the semester to calculate cgpa."]
+      
+        } ,
+
+        {
+            "tag": "What is CGPA",
+            "patterns": ["What is CGPA?","What is gpa?"],
+            "responses": ["Cumulative Grade point average (CGPA) is your academic performance tracker throughout your degree just like a score card in school."]
+      
+        } ,
+
+        {
+            "tag": "fail course",
+            "patterns": ["What happens if I fail a course","What happens if I cannot pass a course?"],
+            "responses": ["If you fail a course you have to repeat the course in the next semester. "]
+      
+        } ,
+
+        {
+            "tag": "number of installments",
+            "patterns": ["how many installments can be done for tuition fee?",""],
+            "responses": ["Generally 2 installments are done for the fee, but you can request for more in the form"]
+      
+        } ,
+
+        {
+            "tag": "fee installment",
+            "patterns": ["can I pay my fee in installments?","Is fee installment option available?","Do I have to pay all the tuition fee at once?"],
+            "responses": ["Yes you can pay your fee in installments to do that you have to submit a general request form to the committe stating your reason and get it approved by the committee head and then finally submit it to the accounts office."]
+      
+        }
     ]
-    },
-    {   
-        "tag": "merits",
-        "patterns": [
-            "How is the merit calculated in FAST?"
-    ],
-        "responses": [
-            "The merit is calculated 50% on the basis of Fast Admission Test and 50% on the basis of your FSC result."
-    ]
-    },
-    {   
-        "tag": "admission schedule",
-        "patterns": [
-            "What is the schedule of admissions in FAST?"
-    ],
-        "responses": [
-            "The admission starts in May and are open till the end of June. For exact dates visit our website."
-    ]
-    },
-    {   
-        "tag": "apply to FAST",
-        "patterns": [
-            "How to apply in FAST?"
-    ],
-        "responses": [
-            "Create an account on our website. Fill out the details and submit applying fee. Then you have to pass the admission test."
-    ]
-    },
-    {   
-        "tag": "scholarship",
-        "patterns": [
-            "Can I get a scholarship in FAST?"
-    ],
-        "responses": [
-            "Yes you can get a scholarship in FAST. FAST provides multiple scholarships to its students, Moreover you can also apply on Financial Assistance. For more information contact pur campus representative."
-    ]
-    },
-    {   
-        "tag": "test pattern",
-        "patterns": [
-            "What is test pattern of admission test in FAST?"
-    ],
-        "responses": [
-            "The test contains questions from Mathematics, Physics, Analytical Skills and English. Each portion has  a specific weight."
-    ]
-    },
-    {   
-        "tag": "fee structure",
-        "patterns": [
-            "What is the fee structure in FAST?"
-    ],
-        "responses": [
-            "The fee is calculatraed in terms of Credit Hour. The fee for first semester ramges from 150K-200K depending upon your credit hours,admission processing fee and other variables."
-    ]
-    },
-    {   
-        "tag": "courses",
-        "patterns": [
-            "What courses will I study in FAST?"
-    ],
-        "responses": [
-            "You will study different courses in the span of 4 years depending upon the program you choose."
-    ]
-    },
-    {   
-        "tag": "hostel",
-        "patterns": [
-            "Is Hostel Facility available in FAST?"
-    ],
-        "responses": [
-            "Currently on campus hostel facility is only available at FAST-Chiniot Faisalabad Campus."
-    ]
-    },
-    {   
-        "tag": "hostel room",
-        "patterns": [
-            "How do I get a room in FAST Hostel?"
-    ],
-        "responses": [
-            "You can get a form for accomodations from FAST FAISALABAD Hostel office. Fill it out and submit the fee. You will be accomodated in the hostel."
-    ]
-    },
-    {   
-        "tag": "hostel fee",
-        "patterns": [
-            "What are the dues for Hostel?",
-            "what is the fee fot hostel",
-            "what are hotel room charges"
-    ],
-        "responses": [
-            "The dues for hostel currently for a shared room in boys hostel are 41000-/ PKR , for a single room 55000-/ PKR, for double room 48000-/ PKR. Yoy may need to submit hostel security fee and mess security fee if you're getting a room for the first time which are 8000-/ and 7000-/ respectively."
-    ]
-    },
-    {   
-        "tag": "hostel meals",
-        "patterns": [
-            "How many meals are served in hostel?"
-    ],
-        "responses": [
-            "3 meals are served in the mess regularly. Breakfast, Lunch and Dinner."
-    ]
-    },
-    {   
-        "tag": "meal cost",
-        "patterns": [
-            "What is the costs of meal in hostel?"
-    ],
-        "responses": [
-            "The cost of meals vary according to the meal being served."
-    ]
-    },
-    {   
-        "tag": "room types",
-        "patterns": [
-            "What type of rooms are avilable in FAST?"
-    ],
-        "responses": [
-            "For Boys:- Single, Double and Shared Rooms are availabe in the hostel, For Girls:- Shared Rooms are availabe in the hostel."
-    ]
-    },
-    {   
-        "tag": "shared room",
-        "patterns": [
-            "How many students are there in a shared room?"
-    ],
-        "responses": [
-            "There are a total of 6 students in a shared room."
-    ]
-    },
-    {   
-        "tag": "single room cost",
-        "patterns": [
-            "What are the dues of a single person room?",
-            "what is the cost of single person room"
-    ],
-        "responses": [
-            "The dues of a single room are 55000 -/ PKR."
-    ]
-    },
-    {   
-        "tag": "shared room cost",
-        "patterns": [
-            "What are the dues for a shared room?",
-            "what is the cost of shared room"
-    ],
-        "responses": [
-            "The dues of a shared room are 41000-/ PKR."
-    ]
-    },
-    {   
-        "tag": "campus change",
-        "patterns": [
-            "What is the process to change FAST Campus?"
-    ],
-        "responses": [
-            "You can change the campus by appearing on the merit of your desired campus and program upon retaking Fast admission test."
-    ]
-    },
-    {   
-        "tag": "credit transfer",
-        "patterns": [
-            "Are credits tranferred when I change a campus?"
-    ],
-        "responses": [
-            "Yes, the credits are transferred when you change a campus."
-    ]
-    },
-    {   
-        "tag": "sports facility",
-        "patterns": [
-            "Are there any sports facility available in the campus?"
-    ],
-        "responses": [
-            "Yes there are a lot of sports facilities availabe in FAST Faisalabad, including table tennis, cricket, football, futsal and badminton."
-    ]
-    },
-    {   
-        "tag": "gym",
-        "patterns": [
-            "Is there a gym in Fast Faisalabad Hostel?"
-    ],
-        "responses": [
-            "Yes there is a gym available in the hostel, you can get the membership once you are allocated a room in the hostel."
-    ]
-    },
-    {   
-        "tag": "campus size",
-        "patterns": [
-            "How big is Faisalabad Campus of Fast?"
-    ],
-        "responses": [
-            "FAST Faisalabad is a big campus compring almost 30 acres of Land."
-    ]
-    },
-    {   
-        "tag": "campus location",
-        "patterns": [
-            "Where is FAST Faisalabad located?"
-    ],
-        "responses": [
-            "FAST Faisalabd is located at Sargodha Road, 10km from the Motorway Interchange at Loonaywala Stop."
-    ]
-    },
-    {   
-        "tag": "night cafe",
-        "patterns": [
-            "Is there a night cafe in Fast Faisalabad hostel?"
-    ],
-        "responses": [
-            "Yes there is a night café (Dhaba) available at Fast Faisalabad."
-    ]
-    },
-    {   
-        "tag": "degree",
-        "patterns": [
-            "Is it tough to get a degree from Fast?"
-    ],
-        "responses": [
-            "Its certainly challenging but if you're detrmined then you'll get all the help you need."
-    ]
-    },
-    {   
-        "tag": "duration BS programs",
-        "patterns": [
-            "What is the duration of BS Programs in FAST?"
-    ],
-        "responses": [
-            "The duration of BS Program is 4-years which consist of 8 semesters."
-    ]
-    },
-    {   
-        "tag": "duration MS programs",
-        "patterns": [
-            "What is the duration of MS Program in FAST?"
-    ],
-        "responses": [
-            "The duration of MS Programs is 2 years as mandated by the HEC."
-    ]
-    },
-    {   
-        "tag": "PHD",
-        "patterns": [
-            "Is PHD Program available at FAST?"
-    ],
-        "responses": [
-            "Yes PHD Programs are available at FAST, under the supervision of HEC Approved Phd supervisors?"
-    ]
-    },
-    {   
-        "tag": "labs",
-        "patterns": [
-            "Are modern labs available at Fast?"
-    ],
-        "responses": [
-            "Yes All campuses of FAST have modern up to date labs available."
-    ]
-    },
-    {   
-        "tag": "internet",
-        "patterns": [
-            "Is internet available at FAST?"
-    ],
-        "responses": [
-            "Yes the whole campus is under internet coverage."
-    ]
-    }
-]
 }

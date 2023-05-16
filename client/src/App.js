@@ -12,6 +12,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import SupportAdmin from './SupportAdmin';
 import adminDash from "./components/adminDash/adminDash";
+import AccuracyReport from "./components/reports/reports";
 import './App.css'
 
 // Check for token to keep user logged in
@@ -49,6 +50,7 @@ class App extends Component {
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/adminDash" component={adminDash} />
               <PrivateRoute exact path="/support" component={SupportAdmin} />
+              <PrivateRoute exact path="/report" component={AccuracyReport} />
            </Switch>
           </div>
         </Router>
