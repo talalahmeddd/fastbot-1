@@ -91,6 +91,8 @@ from keras.models import load_model
 import json
 import random
 from flask import Flask, render_template, request
+import re
+
 
 app = Flask(__name__)
 app.static_folder = 'static'
@@ -106,9 +108,11 @@ with open('data.json') as file:
     intents = json.load(file)
 
 def clean_up_sentence(sentence):
+    sentence = re.sub(r'[^\w\s?]', '', sentence)  # Remove special characters except '?'
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words if word.isalpha() or word == '?']
     return sentence_words
+
 
 def bow(sentence, words, show_details=True):
     sentence_words = clean_up_sentence(sentence)
@@ -181,6 +185,9 @@ def predict_class(sentence, model, words, classes):
     return return_list
 
 def get_response(intents_list, intents_json):
+    if not intents_list:  # No matching intent found
+        return "I'm sorry, but I don't understand. Please try again with a different message."
+    
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
@@ -188,6 +195,7 @@ def get_response(intents_list, intents_json):
             result = random.choice(i['responses'])
             break
     return result
+
 
 def chatbot_response(msg, model, words, classes, intents):
     ints = predict_class(msg, model, words, classes)
@@ -201,8 +209,13 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')
-    response = chatbot_response(userText, model, words, classes, intents)
-    return response
+    userText = userText.strip()  # Remove leading/trailing whitespace
+    # Check if userText contains invalid characters
+    if re.search(r'[^?\w\s,".]|\d', userText):
+        return "Please enter a valid message."
+    else:
+        response = chatbot_response(userText, model, words, classes, intents)
+        return response
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8000)
