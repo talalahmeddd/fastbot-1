@@ -104,7 +104,7 @@ model = load_model('chatbot_model.h5')
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 
-with open('data.json') as file:
+with open('data1.json') as file:
     intents = json.load(file)
 
 def clean_up_sentence(sentence):
@@ -212,7 +212,7 @@ def get_bot_response():
     userText = userText.strip()  # Remove leading/trailing whitespace
     # Check if userText contains invalid characters
     if re.search(r'[^?\w\s,".]|\d', userText):
-        return "Please enter a valid message."
+        return "Please enter message."
     else:
         response = chatbot_response(userText, model, words, classes, intents)
         return response

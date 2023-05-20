@@ -120,7 +120,7 @@ words = []
 classes = []
 documents = []
 ignore_words = ['?', '!', '&', '(', ')', ',', '.', '/', '-', '`']
-data_file = open('data.json', encoding='utf-8').read()
+data_file = open('data1.json', encoding='utf-8').read()
 intents = json.loads(data_file)
 
 for intent in intents['intents']:
@@ -206,7 +206,6 @@ model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accurac
 
 # fitting and saving the model
 hist = model.fit(np.array(x_train), np.array(y_train), epochs=200, batch_size=8, verbose=1, validation_data=(test_x, test_y))
-
 loss = hist.history['loss']
 val_loss = hist.history['val_loss']
 accuracy = hist.history['accuracy']
@@ -217,6 +216,13 @@ data = {
     'val_accuracy': val_accuracy[-1],
     'val_loss': val_loss[-1],
 }
+
+# Save data as JSON
+with open('accuracy_report.json', 'w') as json_file:
+    json.dump(data, json_file)
+
+print('saved')
+
 #keras-tuner function for model
 def build_model(hp):
     model = keras.Sequential()
@@ -258,11 +264,7 @@ best_model = tuner.get_best_models(1)[0]
 best_hyperparameters = tuner.get_best_hyperparameters(1)[0]
 
 #Train on best model
-best_model.fit(np.array(test_x), np.array(test_y), epochs=200, batch_size=5, verbose=1)
-
-# Save data as JSON
-with open('accuracy_report.json', 'w') as json_file:
-    json.dump(data, json_file)
+htuner = best_model.fit(np.array(test_x), np.array(test_y), epochs=200, batch_size=5, verbose=1, validation_data=(test_x, test_y))
 
 model.save('chatbot_model.h5', hist)
 
